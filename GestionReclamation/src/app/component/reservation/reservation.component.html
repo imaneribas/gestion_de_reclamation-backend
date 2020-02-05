@@ -1,0 +1,101 @@
+
+<div>
+
+ <div class="search-hero">
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Start searching ">
+</div>
+<div class="col-md-6 " >
+
+
+    <table class="table table-hover  montableau">
+      <thead>
+      <tr >
+        <th [class.active]="order === 'id_reservation'"
+        (click)="setOrder('id_reservation')" >
+      ID<span [hidden]="reverse" >▼</span
+      ><span [hidden]="!reverse">▲</span>
+    </th>
+        <th [class.active]="order === 'date'"
+            (click)="setOrder('date')" 
+        >
+          Date <span [hidden]="reverse" >▼</span
+          ><span [hidden]="!reverse">▲</span>
+        </th>
+        <th [class.active]="order === 'creneau.horaire'"
+            (click)="setOrder('creneau.horaire')"
+        >
+          horaire <span [hidden]="reverse">▼</span
+          ><span [hidden]="!reverse">▲</span>
+        </th>
+        <th [class.active]="order === 'disponiblite.typedispo'"
+            (click)="setOrder('disponiblite.typedispo')"
+        >
+          disponiblite <span [hidden]="reverse">▼</span
+          ><span [hidden]="!reverse">▲</span>
+        </th>
+        <th [class.active]="order === 'client.nom'"
+            (click)="setOrder('client.nom')"
+        >
+          Nom <span [hidden]="reverse">▼</span
+          ><span [hidden]="!reverse">▲</span>
+        </th>
+        <th [class.active]="order === 'client.prenom'"
+            (click)="setOrder('client.prenom')"
+        >
+          Prenom <span [hidden]="reverse">▼</span
+          ><span [hidden]="!reverse">▲</span>
+        </th>
+        <th [class.active]="order === 'client.email'"
+            (click)="setOrder('client.email')"
+         class="email">
+          Email <span [hidden]="reverse">▼</span
+          ><span [hidden]="!reverse">▲</span>
+        </th>
+        <th [class.active]="order === 'client.phone'"
+            (click)="setOrder('client.phone')"
+            class="email">
+          Phone<span [hidden]="reverse">▼</span
+          ><span [hidden]="!reverse">▲</span>
+        </th>
+        <th [class.active]="order === 'client.role.typerole'"
+            (click)="setOrder('client.role.typerole')"
+        >
+          Role <span [hidden]="reverse">▼</span
+          ><span [hidden]="!reverse">▲</span>
+        </th>
+        <th ></th>
+        <th ></th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr *ngFor ="let x of reservations | filter:searchText | orderBy: order:reverse:'case-insensitive' | paginate: { itemsPerPage: 4, currentPage: p }">
+              <td> {{x.id_reservation}}</td>
+              <td> {{x.date}}</td>
+              <td> {{x.creneau?.horaire}}</td>
+              <td> {{x.disponiblite?.typedispo}}</td>
+              <td> {{x.client?.nom}}</td>
+              <td> {{x.client?.prenom}}</td>
+              <td> {{x.client?.email}}</td>
+              <td> {{x.client?.phone}}</td>
+              <td> {{x.client?.role.typerole}}</td>
+              <td>
+                <button (click)="delete(x.id_reservation)" class="btn btn-danger" >Delete</button>
+              </td>
+              <td>
+                <button class="btn btn-primary" routerLink="/reservation/detail/{{x.id_reservation}}" > Update </button></td>  
+            </tr> 
+            
+      </tbody>
+    </table>
+
+    
+    <table class="mytable">
+      <tr>
+        <td><button class="btn btn-success boutton"  routerLink="/reservation/add"> ADD </button> </td>
+        <td><button class="btn btn-warning boutton"  (click)="goBack()"> Back</button></td> </tr>
+    </table>
+
+   <div> <pagination-controls (pageChange)="p = $event" class="pagination pagination-previous ng-star-inserted "></pagination-controls></div>
+    </div>
+
+  </div>

@@ -1,0 +1,59 @@
+
+
+<!-- Extended default form grid -->
+<div class="secondform" *ngIf="reservation"> 
+  <!-- Grid row -->
+  <div class="form-group">
+    <!-- Default input -->
+    <div class="form-group col-md-6">
+      <label for="inputEmail4" >Nom</label>
+      <input type="email" class="form-control" id="inputEmail4" [(ngModel)]="reservation.client.nom"  readonly>
+    </div>
+    <!-- Default input -->
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Prenom</label>
+      <input type="text" class="form-control" id="inputPassword4" [(ngModel)]="reservation.client.prenom" readonly >
+    </div>
+  </div>
+  <!-- Grid row -->
+
+  <!-- Default input -->
+  <div class="form-group" style="margin-left: 14px;">
+    <label for="inputAddress" >Email</label>
+    <input type="text" class="form-control" id="inputAddress" [(ngModel)]="reservation.client.email" readonly>
+  </div>
+  <!-- Default input -->
+  <div class="form-group" style=" margin-left: 14px;">
+    <label for="inputAddress2" >Phone</label>
+    <input type="text" class="form-control" id="inputAddress2" [(ngModel)]="reservation.client.phone" readonly>
+  </div>
+  <!-- Grid row -->
+  <div class="form-row">
+    <!-- Default input -->
+    <div class="form-group col-md-6">
+      <label for="inputCity">Date</label>
+      <mat-form-field  class="mat-form-field-infix">
+        <input matInput [matDatepicker]="picker" 
+               (dateChange)="addEvent('change', $event)" [(ngModel)]="reservation.date" >
+        <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <!-- Default input -->
+    <div class="form-group col-md-6">
+      <label for="inputZip">Disponibilité</label>
+      <select (change)="selectOption()" class="form-control" [(ngModel)]="reservation.disponiblite.typedispo">  
+        <option *ngFor="let x of disponibilities" [ngValue]="x" [selected]="x === reservation.disponiblite">{{x.typedispo}} </option>  
+    </select>
+    </div>
+  </div>
+  <!-- Grid row -->
+  <table class="monboutton">
+    <tr>
+        <td><button class="btn btn-success" (click)="goBack()">go back</button></td>
+        <td><button class="btn btn-warning" (click)="save()">save</button></td>
+        </tr>
+</table>
+</div>
+<!-- Extended default form grid -->
+

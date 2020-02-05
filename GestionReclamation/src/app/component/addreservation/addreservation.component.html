@@ -1,0 +1,41 @@
+
+<div class="form-style-3 center-block" >
+
+  <fieldset><legend style="
+    padding-left: 8px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+   
+">AJOUTER UNE RESERVATION</legend>
+  <label for="field1" style="padding-left: 30px;"><span style="padding-top: 20px;">Date:</span> 
+    <mat-form-field>
+    <input matInput [matDatepicker]="picker" 
+          (dateChange)="addEvent('change', $event)" [(ngModel)]="planModel.start_time">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+</label>
+  
+  <label for="field4" style="padding-top: 35px;padding-left: 30px;"><span>Creneau:</span><select (change)="selectOption($event.target.value)" [(ngModel)]="selectedOption">
+    <option *ngFor="let x of creneaux" [ngValue]="x">{{x.horaire}}</option>
+    </select></label>
+
+    <table class="mytable">
+      <tr>
+          <td><button class="btn btn-success" (click)="goBack()">go back</button></td>
+          <td><button class="btn btn-primary" (click)="save()">save</button></td>
+          </tr>
+  </table> 
+  </fieldset>
+
+</div>
+
+
+<!--<mat-form-field>
+    <input matInput [matDatepicker]="picker" name="start_time" #start_time="ngModel" [min]="minDate" date="true"
+    [(ngModel)]="planModel.start_time"
+          (dateChange)="addEvent('change', $event)">
+    <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+    <mat-datepicker [startView]="dateStart" #startDate></mat-datepicker>
+  </mat-form-field>-->

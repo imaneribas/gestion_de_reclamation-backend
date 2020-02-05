@@ -1,0 +1,105 @@
+.mytable{
+    border-collapse: separate;
+    border-spacing:  1em;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 70px;
+    padding-left: 41%;
+}
+
+.form-style-3{
+	max-width: 450px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-3 label{
+	display:block;
+	margin-bottom: 10px;
+}
+.form-style-3 label > span{
+	float: left;
+	width: 100px;
+	color: #131212;
+	font-weight: bold;
+	font-size: 14px;
+	text-shadow: 1px 1px 1px #fff;
+}
+.form-style-3 fieldset{
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	
+	padding: 20px;
+	background: #f0f4f7;
+	/*box-shadow: inset 0px 0px 15px #FFE5E5;
+	-moz-box-shadow: inset 0px 0px 15px #FFE5E5;
+	-webkit-box-shadow: inset 0px 0px 15px #FFE5E5;*/
+}
+.form-style-3 fieldset legend{
+	color: #ffffff;
+	/*border-top: 1px solid #100ad6;
+	border-left: 1px solid #100ad6;
+    border-right: 1px solid #100ad6;
+    border-bottom: 1px solid #100ad6;*/
+	border-radius: 5px 5px 5px 5px;
+	
+	background: #dc0030;
+	padding: 5px 5px 5px 5px;
+	
+	font-weight: bolder;
+	font-size: 14px;
+}
+.form-style-3 textarea{
+	width:250px;
+	height:100px;
+}
+.form-style-3 input[type=text],
+.form-style-3 input[type=date],
+.form-style-3 input[type=datetime],
+.form-style-3 input[type=number],
+.form-style-3 input[type=search],
+.form-style-3 input[type=time],
+.form-style-3 input[type=url],
+.form-style-3 input[type=email],
+.form-style-3 select, 
+.form-style-3 textarea{
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid #0a0a0a;
+	outline: none;
+	color:  #100f10;
+	padding: 5px 8px 5px 8px;
+	box-shadow: inset 1px 1px 4px rgb(124, 8, 8);
+	-moz-box-shadow: inset 1px 1px 4px rgb(99, 4, 4);
+	-webkit-box-shadow: inset 1px 1px 4px #eae3e3;
+	background: #f1f0f0;
+	width:50%;
+}
+.form-style-3  input[type=submit],
+.form-style-3  input[type=button]{
+	background: #50c5ec;
+	border: 1px solid #213ca7;
+	padding: 5px 15px 5px 15px;
+	color: #100f10;
+	/*box-shadow: inset -1px -1px 3px rgb(146, 212, 22);
+	-moz-box-shadow: inset -1px -1px 3px #FF62A7;
+	/*-webkit-box-shadow: inset -1px -1px 3px #bf1f1f;*/
+	border-radius: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;	
+	font-weight: bold;
+}
+.required{
+	color:red;
+	font-weight:normal;
+}
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    margin-top: 70px;
+   
+  }

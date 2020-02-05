@@ -1,0 +1,103 @@
+.mytable{
+    border-collapse: separate;
+    border-spacing:  1em;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    padding-left: 80%;
+}
+tbody > tr{
+    background-color:white;
+}
+.montableau{
+   
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    padding-right: 25px;
+    padding-left: 25px;
+    
+}
+
+.date,.horaire{
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+}
+.role{
+    padding-left: 80px;
+    padding-right: 80px;
+    text-align: center;
+    
+}
+thead{
+    background-color: #c7ff7f;
+}
+
+
+.search-hero {
+    max-width: 500px;
+    padding-bottom: 20px;
+    margin:auto;
+   padding-top: 30px;
+  }
+  
+  .form-control {
+    box-shadow: 0 10px 40px 0 #B0C1D9;
+  }
+  .form-control::placeholder  {
+    font-family: FontAwesome;
+  }
+  
+  
+  .list {
+    max-width: 550px;
+    margin: auto;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  .active{
+    background-color: rgb(232, 133, 26) !important;
+  color: black;
+  
+   
+  }
+  .table > thead > tr > th{
+  
+    white-space:nowrap;
+    padding-right: 40px;
+    vertical-align: unset;
+
+  }
+  .table > tbody > tr > th{
+    vertical-align: unset;
+    
+  }
+  .boutton{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+  padding: 7px 25px;
+  
+  }
+  .pagination{
+    
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 387px;
+
+  }
+  .ng-star-inserted{
+    color:black;
+  }
+  .ngx-pagination .disabled {
+    padding: 0.1875rem 0.625rem;
+    color: black;
+    cursor: default;
+   
+  }
+  
